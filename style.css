@@ -1,0 +1,1575 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #ffdce9,
+        #fff2bd 
+    );
+
+    font-family: 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: #9b6680;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #d77fa5;
+    text-shadow: 2px 3px 5px #ffffff;
+}
+
+p {
+    font-size: 18px;
+    color: #a77d70;
+}
+
+.butterfly {
+    position: absolute;
+    top: 25%;
+    left: 8%;
+    width: 55px;
+    height: 45px;
+    z-index: 2;
+    animation: butterfly-flight 9s ease-in-out infinite;
+}
+
+.wings {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.wing {
+    position: absolute;
+    width: 25px;
+    height: 35px;
+    background: linear-gradient(135deg, #ffb6d2, #fff0a8);
+    border: 2px solid #fff7fa;
+    box-shadow: 0 0 8px #ffffff;
+}
+
+.left-wing {
+    left: 2px;
+    top: 0;
+    border-radius: 80% 20% 70% 30%;
+    transform-origin: right center;
+    animation: flap-left 0.35s ease-in-out infinite alternate;
+}
+
+.right-wing {
+    right: 2px;
+    top: 0;
+    border-radius: 20% 80% 30% 70%;
+    transform-origin: left center;
+    animation: flap-right 0.35s ease-in-out infinite alternate;
+}
+
+.butterfly .body {
+    position: absolute;
+    width: 5px;
+    height: 25px;
+    background: #9b6680;
+    border-radius: 50%;
+    left: 25px;
+    top: 10px;
+}
+
+@keyframes flap-left {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(70deg); }
+}
+
+@keyframes flap-right {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(-70deg); }
+}
+
+@keyframes butterfly-flight {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    20% {
+        transform: translate(120px, -70px) rotate(15deg);
+    }
+    45% {
+        transform: translate(260px, 20px) rotate(-10deg);
+    }
+    70% {
+        transform: translate(160px, 130px) rotate(15deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+/* KUPU-KUPU KEDUA */
+.butterfly-two {
+    top: 55%;
+    left: 65%;
+    transform: scale(0.7);
+    animation: butterfly-two-flight 11s ease-in-out infinite;
+}
+
+.butterfly-two .wing {
+    background: linear-gradient(135deg, #ffe7a8, #ffbad8);
+}
+
+/* KUPU-KUPU KETIGA */
+.butterfly-three {
+    top: 15%;
+    left: 75%;
+    transform: scale(0.5);
+    animation: butterfly-three-flight 8s ease-in-out infinite;
+}
+
+.butterfly-three .wing {
+    background: linear-gradient(135deg, #e8c7ff, #ffc9df);
+}
+
+/* JALUR TERBANG BERBEDA */
+@keyframes butterfly-two-flight {
+    0%, 100% { transform: translate(0, 0) rotate(0deg) scale(0.7); }
+    30% { transform: translate(-100px, -80px) rotate(-20deg) scale(0.7); }
+    65% { transform: translate(-180px, 40px) rotate(15deg) scale(0.7); }
+}
+
+@keyframes butterfly-three-flight {
+    0%, 100% { transform: translate(0, 0) rotate(0deg) scale(0.5); }
+    35% { transform: translate(-120px, 90px) rotate(20deg) scale(0.5); }
+    70% { transform: translate(50px, 130px) rotate(-15deg) scale(0.5); }
+}
+
+/* KUPU-KUPU KEEMPAT */
+.butterfly-four {
+    top: 70%;
+    left: 20%;
+    animation: butterfly-four-flight 10s ease-in-out infinite;
+}
+
+.butterfly-four .wing {
+    background: linear-gradient(135deg, #d9c5ff, #ffb9df);
+}
+
+/* KUPU-KUPU KELIMA */
+.butterfly-five {
+    top: 40%;
+    left: 85%;
+    animation: butterfly-five-flight 12s ease-in-out infinite;
+    transform: scale(0.65);
+}
+
+.butterfly-five .wing {
+    background: linear-gradient(135deg, #fff0a8, #ffcaab);
+}
+
+/* KUPU-KUPU KEENAM */
+.butterfly-six {
+    top: 85%;
+    left: 50%;
+    animation: butterfly-six-flight 9s ease-in-out infinite;
+    transform: scale(0.8);
+}
+
+.butterfly-six .wing {
+    background: linear-gradient(135deg, #ffc5d9, #d8f2c5);
+}
+
+/* JALUR TERBANG */
+@keyframes butterfly-four-flight {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    40% { transform: translate(100px, -100px) rotate(20deg); }
+    75% { transform: translate(180px, -20px) rotate(-15deg); }
+}
+
+@keyframes butterfly-five-flight {
+    0%, 100% { transform: translate(0, 0) rotate(0deg) scale(0.65); }
+    35% { transform: translate(-140px, 80px) rotate(-20deg) scale(0.65); }
+    70% { transform: translate(-80px, -100px) rotate(15deg) scale(0.65); }
+}
+
+@keyframes butterfly-six-flight {
+    0%, 100% { transform: translate(0, 0) rotate(0deg) scale(0.8); }
+    30% { transform: translate(120px, -90px) rotate(15deg) scale(0.8); }
+    65% { transform: translate(-100px, -150px) rotate(-20deg) scale(0.8); }
+}
+
+/* TAMAN BUNGA */
+.flower-garden {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* RUMPUT */
+.grass {
+    position: absolute;
+    bottom: -15px;
+    left: -5%;
+    width: 110%;
+    height: 65px;
+    background: linear-gradient(
+        180deg,
+        #c7e9ad,
+        #a9d58e
+    );
+    border-radius: 50% 50% 0 0;
+}
+
+/* BUNGA */
+.flower {
+    position: absolute;
+    bottom: 25px;
+    width: 40px;
+    height: 120px;
+    transform-origin: bottom center;
+    animation: sway 3s ease-in-out infinite alternate;
+}
+
+.flower-one {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.flower-two {
+    left: 28%;
+    height: 95px;
+    animation-delay: 0.5s;
+}
+
+.flower-three {
+    left: 48%;
+    height: 135px;
+    animation-delay: 0.2s;
+}
+
+.flower-four {
+    left: 70%;
+    height: 105px;
+    animation-delay: 0.8s;
+}
+
+.flower-five {
+    left: 88%;
+    height: 125px;
+    animation-delay: 0.4s;
+}
+
+/* BATANG */
+.stem {
+    position: absolute;
+    bottom: 0;
+    left: 18px;
+    width: 4px;
+    height: 85%;
+    background: #78ad72;
+    border-radius: 10px;
+}
+
+/* DAUN */
+.leaves {
+    position: absolute;
+    bottom: 35px;
+    left: 19px;
+    width: 18px;
+    height: 10px;
+    background: #91c982;
+    border-radius: 100% 0 100% 0;
+    transform: rotate(-25deg);
+}
+
+/* KELopak BUNGA */
+.petals {
+    position: absolute;
+    top: 0;
+    left: 1px;
+    width: 38px;
+    height: 38px;
+}
+
+.petals i {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    transform-origin: center;
+}
+
+.petals i:nth-child(1) {
+    transform: translateY(-12px);
+}
+
+.petals i:nth-child(2) {
+    transform: rotate(72deg) translateY(-12px);
+}
+
+.petals i:nth-child(3) {
+    transform: rotate(144deg) translateY(-12px);
+}
+
+.petals i:nth-child(4) {
+    transform: rotate(216deg) translateY(-12px);
+}
+
+.petals i:nth-child(5) {
+    transform: rotate(288deg) translateY(-12px);
+}
+
+/* WARNA BUNGA */
+.pink i {
+    background: #ffb9d2;
+}
+
+.yellow i {
+    background: #ffe58e;
+}
+
+.purple i {
+    background: #d9c2ff;
+}
+
+.petals span {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    width: 10px;
+    height: 10px;
+    background: #fff2a8;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+/* ANIMASI TERTIUP ANGIN */
+@keyframes sway {
+    from {
+        transform: rotate(-5deg);
+    }
+
+    to {
+        transform: rotate(5deg);
+    }
+}
+
+/* PENYESUAIAN HP */
+@media (max-width: 600px) {
+    .flower-garden {
+        height: 160px;
+    }
+
+    .flower {
+        transform-origin: bottom center;
+        scale: 0.8;
+    }
+}
+
+/* LANGIT DREAMY */
+.sky-decoration {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* AWAN */
+.cloud {
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 50px;
+    filter: blur(1px);
+    animation: cloud-drift 12s ease-in-out infinite alternate;
+}
+
+.cloud::before,
+.cloud::after {
+    content: "";
+    position: absolute;
+    background: inherit;
+    border-radius: 50%;
+}
+
+.cloud::before {
+    width: 48px;
+    height: 48px;
+    top: -22px;
+    left: 18px;
+}
+
+.cloud::after {
+    width: 60px;
+    height: 55px;
+    top: -27px;
+    right: 12px;
+}
+
+.cloud-one {
+    top: 12%;
+    left: 8%;
+}
+
+.cloud-two {
+    top: 35%;
+    right: 8%;
+    transform: scale(0.8);
+    animation-delay: -4s;
+}
+
+.cloud-three {
+    top: 65%;
+    left: 38%;
+    transform: scale(0.6);
+    animation-delay: -7s;
+}
+
+@keyframes cloud-drift {
+    from { translate: -15px 0; }
+    to { translate: 25px 10px; }
+}
+
+/* BINTANG BERKILAU */
+.sparkle {
+    position: absolute;
+    color: #fffdf0;
+    font-size: 24px;
+    text-shadow: 0 0 12px #ffffff;
+    animation: twinkle 2s ease-in-out infinite alternate;
+}
+
+.sparkle-one {
+    top: 18%;
+    left: 35%;
+}
+
+.sparkle-two {
+    top: 30%;
+    left: 85%;
+    animation-delay: 0.5s;
+}
+
+.sparkle-three {
+    top: 55%;
+    left: 12%;
+    animation-delay: 1s;
+}
+
+.sparkle-four {
+    top: 72%;
+    left: 80%;
+    animation-delay: 0.7s;
+}
+
+.sparkle-five {
+    top: 45%;
+    left: 55%;
+    animation-delay: 1.3s;
+}
+
+.sparkle-six {
+    top: 10%;
+    left: 68%;
+    animation-delay: 0.3s;
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.3;
+        transform: scale(0.7) rotate(0deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.3) rotate(25deg);
+    }
+}
+
+/* EFEK LEDAKAN */
+#explosion {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 20;
+}
+
+.confetti {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 25px;
+    animation: boom 1.8s ease-out forwards;
+}
+
+@keyframes boom {
+    0% {
+        transform: translate(0, 0) scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(var(--x), var(--y))
+                   rotate(720deg) scale(1.3);
+        opacity: 0;
+    }
+}
+
+/* FIX ANIMASI AMPLOP */
+.envelope {
+    position: relative;
+    overflow: visible;
+    perspective: 800px;
+}
+
+.envelope-back {
+    z-index: 1;
+}
+
+.letter {
+    z-index: 2;
+}
+
+.envelope-front {
+    z-index: 3;
+}
+
+.envelope-flap {
+    z-index: 4;
+    transform-origin: top center;
+    backface-visibility: visible;
+    transition: transform 0.8s ease;
+}
+
+.envelope.open .envelope-flap {
+    transform: rotateX(180deg);
+}
+
+.envelope.open .letter {
+    transform: translateY(-100px);
+}
+
+/* PERBAIKAN ANIMASI AMPLOP */
+.envelope {
+    perspective: 800px;
+    transform-style: preserve-3d;
+}
+
+.envelope-back {
+    z-index: 1;
+}
+
+.letter {
+    z-index: 2;
+    transition: transform 0.8s ease;
+}
+
+.envelope-front {
+    z-index: 3;
+}
+
+.envelope-flap {
+    z-index: 5;
+    transform-origin: top center;
+    backface-visibility: hidden;
+    transition: transform 0.8s ease;
+}
+
+/* KETIKA AMPLOP DIBUKA */
+.envelope.open .envelope-flap {
+    transform: rotateX(180deg);
+}
+
+.envelope.open .letter {
+    z-index: 4;
+    transform: translateY(-100px);
+}
+
+/* SLIDE TRANSITION */
+
+body {
+    overflow-x: hidden;
+}
+
+.page-one {
+    position: relative;
+    width: 100%;
+    transition: transform 1s ease;
+}
+
+.page-two {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+
+    background: linear-gradient(
+        135deg,
+        #ffe1ed,
+        #fff2bd
+    );
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    transform: translateX(100%);
+    transition: transform 1s ease;
+    z-index: 100;
+}
+
+body.show-page-two .page-one {
+    transform: translateX(-100%);
+}
+
+body.show-page-two .page-two {
+    transform: translateX(0);
+}
+
+.page-two h1 {
+    color: #d77fa5;
+    font-size: 32px;
+}
+
+.page-two p {
+    color: #bd7896;
+}
+
+/* FLUTTERSHY EXPLOSION */
+
+.page-two {
+    overflow: hidden;
+}
+
+#fluttershyBurst {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.fluttershy-particle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: clamp(85px, 14vw, 155px);
+    opacity: 0;
+    animation: flyOut 1.5s cubic-bezier(.2,.8,.3,1) forwards;
+}
+
+.fluttershy-particle img {
+    width: 100%;
+    height: auto;
+    display: block;
+    animation: flutterHover 2s ease-in-out infinite alternate;
+}
+
+@keyframes flyOut {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.1);
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        transform:
+            translate(-50%, -50%)
+            translate(var(--x), var(--y))
+            rotate(var(--rotation))
+            scale(1);
+    }
+}
+
+@keyframes flutterHover {
+    from {
+        transform: translateY(-8px) rotate(-5deg);
+    }
+
+    to {
+        transform: translateY(8px) rotate(5deg);
+    }
+}
+
+/* FLUTTERSHY POSITION & CHAT */
+
+#fluttershyBurst {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.fluttershy-particle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: clamp(75px, 12vw, 125px);
+    opacity: 0;
+    animation: flyOut 1.5s ease-out forwards;
+}
+
+.fluttershy-particle img {
+    width: 100%;
+    display: block;
+    animation: flutterHover 2s ease-in-out infinite alternate;
+}
+
+.fluttershy-bubble {
+    position: absolute;
+    bottom: 88%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    color: #d77fa5;
+    padding: 7px 11px;
+    border: 2px solid #f3b5cc;
+    border-radius: 18px;
+    font-size: 11px;
+    font-weight: bold;
+    white-space: nowrap;
+    box-shadow: 0 3px 10px #e8b5c8;
+}
+
+.fluttershy-bubble::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border: 7px solid transparent;
+    border-top-color: white;
+}
+
+@keyframes flutterHover {
+    from {
+        transform: translateY(-7px) rotate(-4deg);
+    }
+    to {
+        transform: translateY(7px) rotate(4deg);
+    }
+}
+
+/* FLUTTERSHY ANIMATION UPGRADE */
+
+.fluttershy-particle {
+    opacity: 0;
+    animation: flutterAppear 0.8s cubic-bezier(.2, 1.5, .5, 1) forwards,
+               characterDance 3s ease-in-out infinite;
+    transform-origin: center bottom;
+}
+
+/* Animasi masuk */
+@keyframes flutterAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0.1) rotate(-20deg);
+    }
+    70% {
+        opacity: 1;
+        transform: scale(1.15) rotate(8deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+/* Gerakan karakter */
+@keyframes characterDance {
+    0%, 100% {
+        translate: 0 0;
+        rotate: -3deg;
+    }
+    25% {
+        translate: 0 -12px;
+        rotate: 3deg;
+    }
+    50% {
+        translate: 0 -4px;
+        rotate: 0deg;
+    }
+    75% {
+        translate: 0 -15px;
+        rotate: -4deg;
+    }
+}
+
+/* Gambar Fluttershy */
+.fluttershy-particle img {
+    animation: characterPulse 2.5s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes characterPulse {
+    0%, 100% {
+        scale: 1;
+    }
+    50% {
+        scale: 1.06;
+    }
+}
+
+/* Bubble ikut sedikit memantul */
+.fluttershy-bubble {
+    animation: bubbleBounce 2s ease-in-out infinite;
+}
+
+@keyframes bubbleBounce {
+    0%, 100% {
+        translate: 0 0;
+    }
+    50% {
+        translate: 0 -5px;
+    }
+}
+
+/* MAGICAL BURST EFFECT */
+
+.magic-sparkle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: var(--size, 20px);
+    pointer-events: none;
+    z-index: 10;
+    opacity: 0;
+    animation: magicExplosion 1.8s ease-out forwards;
+    animation-delay: var(--delay, 0s);
+}
+
+@keyframes magicExplosion {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.2) rotate(0deg);
+    }
+    15% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform:
+            translate(
+                calc(-50% + var(--moveX)),
+                calc(-50% + var(--moveY))
+            )
+            scale(1.5)
+            rotate(180deg);
+    }
+}
+
+/* CLICK INTERACTION */
+
+.fluttershy-particle {
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.fluttershy-particle.clicked {
+    animation: happyJump 0.55s ease;
+    z-index: 20;
+}
+
+@keyframes happyJump {
+    0% {
+        scale: 1;
+        rotate: 0deg;
+    }
+    40% {
+        scale: 1.3;
+        rotate: -10deg;
+    }
+    70% {
+        scale: 1.15;
+        rotate: 10deg;
+    }
+    100% {
+        scale: 1;
+        rotate: 0deg;
+    }
+}
+
+/* HEARTS */
+
+.click-heart {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    font-size: 20px;
+    pointer-events: none;
+    animation: heartFly 1.2s ease-out forwards;
+    z-index: 30;
+}
+
+@keyframes heartFly {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, 0) scale(0.5);
+    }
+    100% {
+        opacity: 0;
+        transform:
+            translate(
+                calc(-50% + var(--heartX)),
+                var(--heartY)
+            )
+            scale(1.5);
+    }
+}
+
+/* ===== PAGE 2: FLUTTERSHY TO DURIAN ===== */
+
+.next-scene {
+    display: none;
+    margin: 25px auto;
+    padding: 13px 24px;
+    border: 2px solid #f3c5d5;
+    border-radius: 30px;
+    background: #fff8e9;
+    color: #bd7896;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 30;
+}
+
+.page-two.fluttershy-ready .next-scene {
+    display: block;
+}
+
+.page-two.durian-mode .next-scene {
+    display: none;
+}
+
+/* Fluttershy menghilang */
+#fluttershyBurst {
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.page-two.durian-mode #fluttershyBurst,
+.page-two.durian-mode > h1,
+.page-two.durian-mode > p {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Durian awalnya disembunyikan */
+.durian-page {
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(145deg, #f5ffe7, #e2f5c9, #fff8df);
+    padding: 30px 15px;
+    overflow: hidden;
+}
+
+.page-two.durian-mode .durian-page {
+    display: flex;
+    animation: durianSceneIn 0.8s ease both;
+}
+
+@keyframes durianSceneIn {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.durian-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.durian-subtitle {
+    color: #789b50;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+/* DURIAN CHARACTER */
+
+.durian-mascot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: durianDrop 1s cubic-bezier(.2, 1.5, .5, 1) both,
+               durianIdle 2.5s ease-in-out 1s infinite;
+}
+
+@keyframes durianDrop {
+    from {
+        transform: translateY(-450px) rotate(-25deg);
+    }
+    75% {
+        transform: translateY(15px) rotate(8deg);
+    }
+    to {
+        transform: translateY(0) rotate(0);
+    }
+}
+
+@keyframes durianIdle {
+    0%, 100% { translate: 0 0; }
+    50% { translate: 0 -10px; }
+}
+
+.durian-body {
+    width: 190px;
+    height: 180px;
+    position: relative;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 45%,
+            #e6ef9b 0%,
+            #c7dc70 45%,
+            #8eae45 100%
+        );
+
+    clip-path: polygon(
+        50% 0%,
+        57% 11%,
+        68% 3%,
+        70% 16%,
+        84% 11%,
+        81% 26%,
+        97% 30%,
+        87% 42%,
+        100% 51%,
+        88% 60%,
+        96% 74%,
+        81% 77%,
+        83% 92%,
+        67% 87%,
+        59% 100%,
+        50% 90%,
+        40% 100%,
+        32% 87%,
+        17% 92%,
+        19% 77%,
+        4% 74%,
+        12% 60%,
+        0% 51%,
+        13% 42%,
+        3% 30%,
+        19% 26%,
+        16% 11%,
+        32% 16%,
+        33% 3%,
+        44% 11%
+    );
+
+    filter: drop-shadow(0 10px 8px #789b5050);
+}
+
+.durian-face {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.durian-eyes {
+    color: #26351d;
+    font-size: 25px;
+    letter-spacing: 13px;
+    margin-left: 12px;
+}
+
+.durian-mouth {
+    color: #563c2c;
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+.durian-cheeks {
+    color: #e98e8e;
+    font-size: 17px;
+}
+
+.durian-feet {
+    display: flex;
+    gap: 65px;
+    margin-top: -3px;
+}
+
+.durian-feet span {
+    width: 23px;
+    height: 17px;
+    background: #789b50;
+    border-radius: 50%;
+}
+
+.durian-dialogue {
+    max-width: 85%;
+    background: white;
+    color: #648544;
+    padding: 14px 20px;
+    border: 2px solid #c7dda5;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px #789b5020;
+}
+
+#durianNext {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: #8eae5c;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Sembunyikan tombol halaman berikutnya dulu */
+#durianNext {
+    display: none;
+}
+
+/* =================================
+   MR. DURIAN - COMPLETE DESIGN
+================================= */
+
+/* Scene */
+.durian-page {
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(
+        145deg,
+        #f5ffe7,
+        #e2f5c9,
+        #fff8df
+    );
+    padding: 30px 15px;
+    overflow: hidden;
+}
+
+.page-two.durian-mode .durian-page {
+    display: flex;
+    animation: durianSceneIn 0.8s ease both;
+}
+
+@keyframes durianSceneIn {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.durian-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+/* Title */
+.durian-subtitle {
+    color: #789b50;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.durian-from {
+    color: #789b50;
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin-top: -10px;
+    text-shadow: 1px 2px 0 white;
+}
+
+/* Durian mascot */
+.durian-mascot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    animation: durianDrop 1s cubic-bezier(.2, 1.5, .5, 1) both;
+}
+
+@keyframes durianDrop {
+    from {
+        transform: translateY(-450px) rotate(-25deg);
+    }
+    75% {
+        transform: translateY(15px) rotate(8deg);
+    }
+    to {
+        transform: translateY(0) rotate(0);
+    }
+}
+
+/* Floating after landing */
+.durian-mascot.landed {
+    animation: durianIdle 2.5s ease-in-out infinite;
+}
+
+@keyframes durianIdle {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-9px);
+    }
+}
+
+/* Spiky body */
+.durian-body {
+    width: 190px;
+    height: 180px;
+    position: relative;
+
+    background: radial-gradient(
+        ellipse at 50% 45%,
+        #e6ef9b,
+        #c7dc70 50%,
+        #8eae45
+    );
+
+    clip-path: polygon(
+        50% 0%, 57% 11%, 68% 3%,
+        70% 16%, 84% 11%, 81% 26%,
+        97% 30%, 87% 42%, 100% 51%,
+        88% 60%, 96% 74%, 81% 77%,
+        83% 92%, 67% 87%, 59% 100%,
+        50% 90%, 40% 100%, 32% 87%,
+        17% 92%, 19% 77%, 4% 74%,
+        12% 60%, 0% 51%, 13% 42%,
+        3% 30%, 19% 26%, 16% 11%,
+        32% 16%, 33% 3%, 44% 11%
+    );
+
+    filter: drop-shadow(0 10px 8px #789b5050);
+}
+
+/* Face */
+.durian-face {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+    padding-top: 10px;
+}
+
+.durian-eyes {
+    color: #26351d;
+    font-size: 25px;
+    letter-spacing: 13px;
+    margin-left: 12px;
+}
+
+.durian-mouth {
+    width: 23px;
+    height: 10px;
+    font-size: 0;
+    border-bottom: 4px solid #563c2c;
+    border-radius: 0 0 50% 50%;
+    transition: all 0.1s ease;
+}
+
+.durian-cheeks {
+    color: #e98e8e;
+    font-size: 17px;
+}
+
+/* Talking animation */
+.durian-mascot.talking .durian-mouth {
+    animation: mouthTalk 0.2s ease-in-out infinite alternate;
+}
+
+@keyframes mouthTalk {
+    from {
+        height: 3px;
+        width: 16px;
+    }
+    to {
+        height: 19px;
+        width: 25px;
+        background: #8c4848;
+        border: 2px solid #563c2c;
+        border-radius: 50%;
+    }
+}
+
+/* Feet */
+.durian-feet {
+    display: flex;
+    gap: 65px;
+    margin-top: -3px;
+}
+
+.durian-feet span {
+    width: 23px;
+    height: 17px;
+    background: #789b50;
+    border-radius: 50%;
+}
+
+/* Speech bubble */
+.durian-dialogue {
+    position: relative;
+    max-width: min(85%, 360px);
+    min-width: 190px;
+    min-height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    padding: 15px 20px;
+    box-sizing: border-box;
+
+    background: white;
+    color: #648544;
+
+    border: 3px solid #c7dda5;
+    border-radius: 22px;
+
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.5;
+
+    box-shadow: 0 6px 15px #789b5030;
+}
+
+.durian-dialogue::after {
+    content: "";
+    position: absolute;
+    bottom: -17px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 16px solid white;
+}
+
+@keyframes bubbleAppear {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(.85);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Next button */
+#durianNext {
+    display: none;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: #8eae5c;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Fluttershy to Durian transition */
+.next-scene {
+    display: none;
+    margin: 25px auto;
+    padding: 13px 24px;
+    border: 2px solid #f3c5d5;
+    border-radius: 30px;
+    background: #fff8e9;
+    color: #bd7896;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 30;
+}
+
+.page-two.fluttershy-ready .next-scene {
+    display: block;
+}
+
+.page-two.durian-mode .next-scene {
+    display: none;
+}
+
+.page-two.durian-mode #fluttershyBurst,
+.page-two.durian-mode > h1,
+.page-two.durian-mode > p {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* =================================
+   BIRTHDAY LETTER PAGE
+================================= */
+
+.letter-page {
+    display: none;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        135deg,
+        #f8e8d0,
+        #e8cba9,
+        #f5dfc3
+    );
+    z-index: 20;
+}
+
+.page-two.letter-mode .letter-page {
+    display: flex !important;
+}
+
+/* Sembunyikan Fluttershy setelah Durian */
+
+.page-two.letter-mode #fluttershyBurst,
+.page-two.letter-mode > h1,
+.page-two.letter-mode > p,
+.page-two.letter-mode > #toDurian,
+.page-two.letter-mode .durian-page {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+/* Kertas surat */
+
+.letter-paper {
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    padding: 45px 40px;
+    box-sizing: border-box;
+    background: #fffaf0;
+    border-radius: 8px;
+    box-shadow:
+        0 15px 40px rgba(80, 50, 30, 0.2),
+        inset 0 0 25px rgba(190, 150, 100, 0.1);
+    color: #594333;
+    animation: letterAppear 1s ease;
+}
+
+.letter-header {
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: #b18a67;
+    margin-bottom: 20px;
+}
+
+.letter-paper h1 {
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    color: #8e6247;
+    margin-bottom: 30px;
+}
+
+.letter-writing {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    line-height: 2;
+    color: #594333;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.letter-signature {
+    text-align: right;
+    margin-top: 30px;
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: #9b7659;
+}
+
+.deepsea-button {
+    display: none;
+}
+
+@keyframes letterAppear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tampilan HP */
+
+@media (max-width: 600px) {
+    .letter-page {
+        padding: 20px 14px;
+    }
+
+    .letter-paper {
+        padding: 30px 22px;
+    }
+
+    .letter-paper h1 {
+        font-size: 25px;
+    }
+
+    .letter-writing {
+        font-size: 15px;
+        line-height: 1.9;
+    }
+}
